@@ -1,2 +1,2 @@
 # NgSugar
-Non-orthodox syntactic sugar utils to Angular
+Non-orthodox syntactic sugar utils for Angular
