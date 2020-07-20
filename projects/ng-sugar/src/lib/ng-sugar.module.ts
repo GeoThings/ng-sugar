@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
+import {ObservableComponent} from './observable-component/observable-component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ObservableComponent
+  ],
   imports: [],
-  exports: []
+  exports: [
+    ObservableComponent
+  ]
 })
 export class NgSugarModule {}

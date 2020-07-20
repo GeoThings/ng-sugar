@@ -7,7 +7,7 @@ import {
   AfterContentChecked,
   AfterViewInit,
   AfterViewChecked,
-  OnDestroy, Directive
+  OnDestroy, Component
 } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil, take } from 'rxjs/operators';
@@ -22,9 +22,14 @@ const afterViewCheckedKey = Symbol('afterViewChecked');
 const onDestroyKey = Symbol('onDestroy');
 
 // originated from https://stackoverflow.com/a/46572739/2380455
+// I had to go with @Component decorator as the compiler will brutally complain
+// with https://stackoverflow.com/a/62613494/2380455 if this is not decorated
+@Component({
+  selector: 'lib-observable-component',
+  template: ''
+})
 // tslint:disable: no-conflicting-lifecycle directive-class-suffix
-@Directive()
-export abstract class ObservableComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit,
+export class ObservableComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit,
 AfterViewChecked, OnDestroy {
     // all observables will complete on component destruction
     protected get onChanges(): Observable<SimpleChanges> {
