@@ -1,10 +1,10 @@
 {
   "name": "ng-sugar",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Non-orthodox syntactic sugar utils for Angular.",
   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/GeoThings/ng-sugar.git"
+    "type": "git",
+    "url": "git+https://github.com/GeoThings/ng-sugar.git"
   },
   "keywords": [
     "angular",
@@ -17,7 +17,7 @@
   "author": "GeoThings",
   "license": "MIT",
   "bugs": {
-      "url": "git+https://github.com/GeoThings/ng-sugar/issues"
+    "url": "git+https://github.com/GeoThings/ng-sugar/issues"
   },
   "homepage": "https://github.com/GeoThings/ng-sugar",
   "peerDependencies": {
@@ -26,6 +26,7 @@
     "rxjs": "^6.5.5"
   },
   "dependencies": {
+    "observable-input": "^2.0.2",
     "tslib": "^2.0.0"
   }
 }
