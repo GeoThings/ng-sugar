@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
-import {ObservableComponent} from './observable-component/observable-component';
+import {ObservableComponent} from './observable-component';
+import { NgLetDirective } from './ng-let.directive';
 
 @NgModule({
   declarations: [
-    ObservableComponent
+    ObservableComponent,
+    NgLetDirective
   ],
   imports: [],
   exports: [
-    ObservableComponent
+    ObservableComponent,
+    NgLetDirective
   ]
 })
 export class NgSugarModule {}
