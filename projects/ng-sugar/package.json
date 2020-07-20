@@ -1,7 +1,7 @@
 {
   "name": "ng-sugar",
   "version": "0.1.5",
-  "description": "Non-orthodox syntactic sugar utils for Angular.",
+  "description": "Syntactic sugar utils for Angular.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GeoThings/ng-sugar.git"
