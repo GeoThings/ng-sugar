@@ -7,7 +7,7 @@ import {
   AfterContentChecked,
   AfterViewInit,
   AfterViewChecked,
-  OnDestroy, Component
+  OnDestroy, Directive
 } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil, take } from 'rxjs/operators';
@@ -22,7 +22,8 @@ const afterViewCheckedKey = Symbol('afterViewChecked');
 const onDestroyKey = Symbol('onDestroy');
 
 // originated from https://stackoverflow.com/a/46572739/2380455
-// tslint:disable: no-conflicting-lifecycle
+// tslint:disable: no-conflicting-lifecycle directive-class-suffix
+@Directive()
 export abstract class ObservableComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit,
 AfterViewChecked, OnDestroy {
     // all observables will complete on component destruction

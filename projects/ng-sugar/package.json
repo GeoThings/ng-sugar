@@ -1,12 +1,12 @@
 {
   "name": "ng-sugar",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "peerDependencies": {
     "@angular/common": "^10.0.4",
-    "@angular/core": "^10.0.4"
+    "@angular/core": "^10.0.4",
+    "rxjs": "^6.5.5"
   },
   "dependencies": {
-    "rxjs": "^6.6.0",
     "tslib": "^2.0.0"
   }
 }
