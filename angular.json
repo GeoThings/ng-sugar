@@ -2,5 +2,49 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "ng-sugar": {
+      "projectType": "library",
+      "root": "projects/ng-sugar",
+      "sourceRoot": "projects/ng-sugar/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-sugar/tsconfig.lib.json",
+            "project": "projects/ng-sugar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-sugar/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-sugar/src/test.ts",
+            "tsConfig": "projects/ng-sugar/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-sugar/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-sugar/tsconfig.lib.json",
+              "projects/ng-sugar/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "cli": {
+    "analytics": "52a57cf4-5f6f-4ebc-8263-b3986fbfb1fd"
+  },
+  "defaultProject": "ng-sugar"
 }
