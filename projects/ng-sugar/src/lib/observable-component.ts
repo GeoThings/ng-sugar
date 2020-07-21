@@ -31,6 +31,9 @@ const onDestroyKey = Symbol('onDestroy');
 // tslint:disable: no-conflicting-lifecycle directive-class-suffix
 export class ObservableComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit,
 AfterViewChecked, OnDestroy {
+
+    constructor(){}
+
     // all observables will complete on component destruction
     protected get onChanges(): Observable<SimpleChanges> {
         return this.getObservable(onChangesKey).pipe(takeUntil(this.onDestroy));
