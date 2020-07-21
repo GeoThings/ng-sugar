@@ -114,3 +114,7 @@ See [insidewhy/observable-input](https://github.com/insidewhy/observable-input)
 ## Contributing
 
 Check [CONTIBUTING.md](CONTRIBUTING.md)
+
+## Attribution
+
+This package is MIT, but it reimports ObservableInput from [insidewhy/observable-input](https://github.com/insidewhy/observable-input) which doesn't include `LICENSE`, please ask in [insidewhy/observable-input/issues](https://github.com/insidewhy/observable-input/issues) for clarification.
