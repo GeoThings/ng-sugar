@@ -1,6 +1,6 @@
 {
   "name": "ng-sugar",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Syntactic sugar utils for Angular.",
   "repository": {
     "type": "git",
